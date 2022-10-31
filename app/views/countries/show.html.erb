@@ -1,0 +1,14 @@
+<h1><%= @country.name %></h1>
+
+<ul>
+    <li>Name: <%= @country.name %></li>
+    <li>Date: <%= @country.date.strftime '%A, %B %e, %Y' unless @country.date.nil? %></li>
+    <li>Note: <%= @country.note%></li>
+</ul>
+
+
+
+<div class="controls">
+    <%= link_to 'Edit country', edit_country_path(@country) %>
+    <%= link_to 'Delete country', @country, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
+</div>

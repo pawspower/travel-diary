@@ -1,0 +1,12 @@
+<h1> All cities </h1>
+
+<% @cities.each do |city| %>
+    <p><%= city.name %></p>
+    <ul>
+        <li>Name: <%= link_to city.name, city %></li>
+        <% unless city.date.nil? %>
+        <li>Date: <%= city.date.strftime '%A; %B %e, %Y' %></li>
+        <% end %>
+        <li>Note: <%= city.note %></li>
+    </ul>
+<% end %>

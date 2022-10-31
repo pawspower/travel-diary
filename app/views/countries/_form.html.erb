@@ -1,0 +1,12 @@
+<%= form_for @country do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :date, 'Date' %>
+    <%= f.text_field :date, :placeholder => 'YYYY-MM-DD' %>
+
+    <%= f.label :note %>
+    <%= f.text_field :note %>
+
+    <%= f.submit %>
+<% end %>

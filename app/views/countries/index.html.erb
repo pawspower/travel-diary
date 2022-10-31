@@ -1,0 +1,13 @@
+<h1> All countries </h1>
+
+<% @countries.each do |country| %>
+    <p><%= country.name %></p>
+    <ul>
+        <li>Name: <%= link_to country.name, country %></li>
+        <% unless country.date.nil? %>
+        <li>Date: <%= country.date.strftime '%A; %B %e, %Y' %></li>
+        <% end %>
+        <li>Note: <%= country.note %></li>
+    </ul>
+<% end %>
+

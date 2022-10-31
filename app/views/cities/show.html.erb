@@ -1,0 +1,15 @@
+<h1><%= @city.name %></h1>
+
+<ul>
+    <li>Name: <%= @city.name %></li>
+    <li>Date: <%= @city.date.strftime '%A, %B %e, %Y' unless @city.date.nil? %></li>
+    <li>Note: <%= @city.note%></li>
+    <li>Image: <%= @city.image%></li>
+</ul>
+
+
+
+<div class="controls">
+    <%= link_to 'Edit city', edit_city_path(@city) %>
+    <%= link_to 'Delete city', @city, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
+</div>
