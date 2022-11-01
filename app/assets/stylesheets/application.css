@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    background-image: url(/Users/pawspower/Projects/Project1/travel-diary/app/assets/images/image1.jpg);
+    background-size: cover;
+}

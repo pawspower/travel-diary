@@ -1,12 +1,22 @@
+
 <h1> All cities </h1>
 
 <% @cities.each do |city| %>
-    <p><%= city.name %></p>
-    <ul>
-        <li>Name: <%= link_to city.name, city %></li>
-        <% unless city.date.nil? %>
-        <li>Date: <%= city.date.strftime '%A; %B %e, %Y' %></li>
+    <p><%city.name %></p>
+
+<div class="card">
+  <h5 class="card-header">
+  <% unless city.date.nil? %>
+        <%= city.date.strftime '%A; %B %e, %Y' %>
         <% end %>
-        <li>Note: <%= city.note %></li>
-    </ul>
+  </h5>
+  <div class="card-body">
+    <h5 class="card-title">
+    <%= link_to city.name, city %>
+    </h5>
+    <p class="card-text"><%= city.note %></p>
+    <a href="#" class="btn btn-primary">Start the journey</a>
+  </div>
+</div>
+
 <% end %>

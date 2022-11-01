@@ -1,12 +1,15 @@
+<div class="signin">
 <h1>Sign In</h1>
 <%=form_tag @login_path do %>
 
-    <%= label_tag :email %>
-    <%= email_field_tag :email %>
+    <%= label_tag :email, nil, :class => 'form-label' %>
+    <%= email_field_tag :email, nil, :class => 'form-control' %>
 
-    <%= label_tag :password %>
-    <%= email_field_tag :password %>
-
+    <%= label_tag :password, nil, :class => 'form-label' %>
+    <%= password_field_tag :password, nil, :class => 'form-control'%>
+    
+    <div class="submit">
     <%= submit_tag "Sign In" %>
-
+    </div>
 <% end %>
+</div>

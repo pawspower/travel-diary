@@ -6,7 +6,9 @@
     <li>Note: <%= @country.note%></li>
 </ul>
 
-
+<% @country.cities.each do |city| %>
+<p><%= city.name %></p>
+<% end %>
 
 <div class="controls">
     <%= link_to 'Edit country', edit_country_path(@country) %>
