@@ -1,57 +1,36 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" class="h-100">
   <head>
-    <title>TravelDiary</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <title>Travel Diary</title>
+
+ <link rel="canonical" href="assets/images/image1.jpg">
+   
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
   </head>
+  <body class="<%= "d-flex h-100 text-center text-bg-dark" if params[:action] =="home"%>">
+    
 
-  <body>
-    <nav>
+<div class="container d-flex flex-column <%= "cover-container  w-100 h-100 p-3 mx-auto " if params[:action] =="home"%>">
+
   
-    <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-    <a class="navbar-brand" href="#"><%= link_to 'Travel Diary', root_path %>  </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to 'Sign up', new_user_path %></a>
-        </li>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to 'Sign in', login_path %></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to 'All countries', countries_path %></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to 'New country', new_country_path %></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to 'All cities', cities_path %></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"> <%= link_to 'New city', new_city_path %></a>
-        </li>   
-      </ul>
-    </div>
-  </nav>
-</nav>
+  <%= yield %>
 
-    <div class="container">
-  
-      <%= yield %>
-    </div>
+<footer class="mt-auto text-white-50">
+<p>2022. Sydney - Australia</p>
+</footer>
 
-  </div>
+
+</div>
+    
   </body>
 </html>
+
+
+

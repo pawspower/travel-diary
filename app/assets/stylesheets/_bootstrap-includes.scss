@@ -1,17 +1,10 @@
 @import "bootstrap";
 
 body {
-    background-image: url(/Users/pawspower/Projects/Project1/travel-diary/app/assets/images/image1.jpg);
+    background-image: url(/assets/image1.jpg);
     background-size: cover;
 
 }
-
-.nav-item {
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-}
-
 
 .submit {
     padding-top: 20px;
@@ -47,4 +40,14 @@ body {
 .country {
     padding-top: 50px;
     max-width: 750px;
+}
+
+.home {
+    width: 400px;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }

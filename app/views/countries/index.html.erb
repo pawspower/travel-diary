@@ -1,5 +1,7 @@
 <h1> All countries </h1>
 
+<%= link_to "New Countries", new_country_path, :class => "nav-link" %>
+
 <% @countries.each do |country| %>
     <p><%country.name %></p>
 
@@ -11,11 +13,11 @@
   </h5>
   <div class="card-body">
     <h5 class="card-title">
-    <%= link_to country.name, country %>
+    <%= country.name %>
     </h5>
 
     <p class="card-text"><%= country.note %></p>
-    <a href="#" class="btn btn-primary"><%= button_to "Start the journey", country %></a>
+    <%= link_to "Start the journey", country, :class => "btn btn-primary" %>
   </div>
 </div>
 

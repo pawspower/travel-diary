@@ -1,13 +1,24 @@
 <h1><%= @country.name %></h1>
-
-<ul>
-    <li>Name: <%= @country.name %></li>
-    <li>Date: <%= @country.date.strftime '%A, %B %e, %Y' unless @country.date.nil? %></li>
-    <li>Note: <%= @country.note%></li>
-</ul>
+<%= link_to "New City", new_city_path, :class => "nav-link" %>
 
 <% @country.cities.each do |city| %>
-<p><%= city.name %></p>
+    <p><%city.name %></p>
+
+<div class="card">
+  <h5 class="card-header">
+  <% unless city.date.nil? %>
+        <%= city.date.strftime '%A; %B %e, %Y' %>
+        <% end %>
+  </h5>
+  <div class="card-body">
+    <h5 class="card-title">
+    <%= city.name %>
+    </h5>
+    <p class="card-text"><%= city.note %></p>
+    <%= link_to "Start the journey", city_path(city), :class => "btn btn-primary" %>
+  </div>
+</div>
+
 <% end %>
 
 <div class="controls">
