@@ -29,7 +29,6 @@ Some areas that I want to improve are:
 - More styling and better design for the website.
 - Add admin as another model of the webapp.
 
-
 ## Acknowledgements
 - Big thanks to Joel and Loden for the help and support during this project!
 
