@@ -1,12 +1,15 @@
 <h1><%= @city.name %></h1>
+<%= link_to "All Countries", countries_path, :class => "nav-link" %>
 <ul>
     <li>Name: <%= @city.name %></li>
     <li>Date: <%= @city.date.strftime '%A, %B %e, %Y' unless @city.date.nil? %></li>
     <li>Note: <%= @city.note%></li>
-    <li>Image: <%= @city.image%></li>
+    <%= cl_image_tag(@city.image, :class => "image") %></li>
 </ul>
 
 <div class="controls">
-    <%= link_to 'Edit city', edit_city_path(@city) %>
-    <%= link_to 'Delete city', @city, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
+    <%= link_to 'Edit city', edit_city_path(@city), :class => "nav-link" %>
+    <%= link_to 'Delete city', @city, :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => "nav-link"%>
 </div>
+
+

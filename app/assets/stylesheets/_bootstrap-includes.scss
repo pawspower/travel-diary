@@ -1,34 +1,7 @@
 @import "bootstrap";
 
-body {
-    background-image: url(/assets/image1.jpg);
-    background-size: cover;
-
-}
-
 .submit {
     padding-top: 20px;
-}
-
-
-.signup {
-    width: 400px;
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.signin {
-    width: 400px;
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 
 
@@ -42,12 +15,14 @@ body {
     max-width: 750px;
 }
 
-.home {
-    width: 400px;
-    margin: 0;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+
+.image {
+    width: 700px;
 }
+
+div.container header#header {
+    margin-bottom: 175px !important;
+}
+
+
+

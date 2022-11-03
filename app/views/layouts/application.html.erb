@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
+    <%= cloudinary_js_config %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -14,16 +15,16 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
   </head>
-  <body class="<%= "d-flex h-100 text-center text-bg-dark" if params[:action] == "home" %>">
-    
 
+
+<body class="<%= params[:controller] %>-<%= params[:action] %> <%= "d-flex h-100 text-center text-bg-dark" if params[:action] == "home" %>">
 <div class="container d-flex flex-column <%= "cover-container  w-100 h-100 p-3 mx-auto " if params[:action] =="home"%>">
-
+<br>
   
   <%= yield %>
 
 <footer class="mt-auto text-white-50">
-<p>2022. Sydney - Australia</p>
+<p>2022 Sydney - Australia</p>
 </footer>
 
 

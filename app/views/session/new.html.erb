@@ -1,15 +1,49 @@
-<div class="signin">
-<h1>Sign In</h1>
-<%=form_tag @login_path do %>
 
-    <%= label_tag :email, nil, :class => 'form-label' %>
-    <%= email_field_tag :email, nil, :class => 'form-control' %>
 
-    <%= label_tag :password, nil, :class => 'form-label' %>
-    <%= password_field_tag :password, nil, :class => 'form-control'%>
+  <!-- Custom styles for this template -->
+
+<main class="form-signin w-100 m-auto">
+  
+ <%=form_tag @login_path do %>
+    <h1 class="h3 mb-3 fw-normal">Please Sign In</h1>
+        <div class="form-floating"> 
+            
+            <%= email_field_tag :email, nil, :class => 'form-control', :id =>"floatingInput", :placeholder =>"name@example.com"%>
+            <%= label_tag :email, nil, :for => "floatingInput" %>
+        </div>
+        
+        <div class="form-floating">
+            
+            <%= password_field_tag :password, nil, :class => 'form-control', :id => "floatingPassword", :placeholder => "Password"%>
+            <%= label_tag :password, nil, :for => "floatingPassword" %>
+        </div>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        
+        <div>
+            <%= submit_tag "Sign In", :class => "w-100 btn btn-lg btn-primary" %>
+        </div>
+        <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+    <% end %>
     
-    <div class="submit">
-    <%= submit_tag "Sign In" %>
-    </div>
-<% end %>
-</div>
+   
+</main>  
+ 
+
+
+           
+
+
+
+ 
+
+
+
+
+
+
+
+
