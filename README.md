@@ -1,24 +1,37 @@
-# README
+# Project Name
+- Travel Diary
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Objective
+- This project is part of GA's projects and aim to develop a CRUD system using Ruby on Rails.
 
-Things you may want to cover:
+## Tech Stack
+- Ruby on Rails
+- PostgreSql
+- HTML
+- CSS
+- Heroku
+- Cloudinary
 
-* Ruby version
+## Project Description
+- This webapp is designed for the user to create a blog/journal so that they can share their travel experiences to other user.
 
-* System dependencies
+## Screenshots
+![](images/sstd.png)
 
-* Configuration
+## Project Status
+- Project is Complete.
+- However, I believe that there's always room for improvement so feel free to hit me up with your new ideas.
 
-* Database creation
+## Room for Improvement
+Some areas that I want to improve are:
+- Allow user to upload more photos.
+- Allow user to drag and move their photos around the page.
+- More styling and better design for the website.
+- Add admin as another model of the webapp.
 
-* Database initialization
 
-* How to run the test suite
+## Acknowledgements
+- Big thanks to Joel and Loden for the help and support during this project!
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Contact
+- Created by Keshia Wijaya (@pawspower - kesh.learning@gmail.com) - feel free to contact me!
