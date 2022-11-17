@@ -1,15 +1,33 @@
-<h1><%= @city.name %></h1>
-<%= link_to "All Countries", countries_path, :class => "nav-link" %>
-<ul>
-    <li>Name: <%= @city.name %></li>
-    <li>Date: <%= @city.date.strftime '%A, %B %e, %Y' unless @city.date.nil? %></li>
-    <li>Note: <%= @city.note%></li>
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Cities</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+       <%= link_to "All Countries", countries_path, :class => "nav-link" %>
+       <%= link_to 'Edit City', edit_city_path(@city), :class => "nav-link" %>
+       <%= link_to 'Delete City', @city, :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => "nav-link"%>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<p></p>
+<div class="card">
+  <h5 class="card-header">
+  <% unless @city.date.nil? %>
+        <%= @city.date.strftime '%A; %B %e, %Y' %>
+  <% end %>
+  </h5>
+  <div class="card-body">
+    <h5 class="card-title">
+    <%= @city.name %>
+    </h5>
+    <p class="card-text"><%= @city.note %></p>
     <%= cl_image_tag(@city.image, :class => "image") %></li>
-</ul>
-
-<div class="controls">
-    <%= link_to 'Edit city', edit_city_path(@city), :class => "nav-link" %>
-    <%= link_to 'Delete city', @city, :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => "nav-link"%>
+  </div>
 </div>
-
 

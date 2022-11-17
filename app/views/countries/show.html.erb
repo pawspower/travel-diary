@@ -1,7 +1,19 @@
-<h1><%= @country.name %></h1>
-<%= link_to "New City", new_city_path, :class => "nav-link" %>
-<%= link_to "All Countries", countries_path, :class => "nav-link" %>
-
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><%= @country.name %></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+       <%= link_to "New City", new_city_path(:country_id=>@country.id), :class => "nav-link" %>
+       <%= link_to "All Countries", countries_path, :class => "nav-link" %>
+       <%= link_to 'Edit Country', edit_country_path(@country), :class => "nav-link" %>
+       <%= link_to 'Delete Country', @country, :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => "nav-link" %>
+      </div>
+    </div>
+  </div>
+</nav>
 
 <% @country.cities.each do |city| %>
     <p><%city.name %></p>
@@ -23,8 +35,5 @@
 
 <% end %>
 
-<div class="controls">
-    <%= link_to 'Edit country', edit_country_path(@country), :class => "nav-link" %>
-    <%= link_to 'Delete country', @country, :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => "nav-link" %>
-</div>
+
 

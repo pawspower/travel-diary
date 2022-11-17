@@ -29,12 +29,12 @@ class CountriesController < ApplicationController
     def destroy
         country = Country.find params[:id]
         country.destroy
-        redirect_to country_path
+        redirect_to countries_path
     end
 
     private
     # strong params: a way to sanitise data from the form by ensuring it's on our safe list
     def country_params
-        params.require(:country).permit(:name, :date, :note)
+        params.require(:country).permit(:name, :date, :note, :country_id)
     end
 end

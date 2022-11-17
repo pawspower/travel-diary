@@ -1,6 +1,6 @@
 <div class="city">
 
-<h1>Edit city</h1>
+<h1>Edit City</h1>
 
 <%= form_for @city, :html => {:multipart => true} do |f| %>
 
@@ -18,6 +18,8 @@
     <%= f.cl_image_upload :image, :class => 'form-control' %>
     </div>
     
+    <%= f.hidden_field :country_id, :value => params[:country_id]%>
+
     <div class="submit">
     <%= f.submit %>
     </div>
