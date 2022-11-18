@@ -14,6 +14,7 @@
 //= require jquery
 //= require popper
 //= require bootstrap-sprockets
+//= require cloudinary
 //= require_tree .
 
 
