@@ -17,7 +17,7 @@
 - Visit the website here : 
 
 ## Screenshots
-![](images/sstd.png)
+![](app/assets/images/sstd.png)
 
 ## Project Status
 - Project is Complete.
