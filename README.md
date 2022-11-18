@@ -14,7 +14,7 @@
 
 ## Project Description
 - This webapp is designed for the user to create a blog/journal so that they can share their travel experiences to other user.
-- Visit the website here : 
+- Visit the website here: https://travel-diary-ga.herokuapp.com/
 
 ## Screenshots
 ![](app/assets/images/sstd.png)
