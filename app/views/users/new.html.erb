@@ -4,25 +4,25 @@
 
 <main class="form-signin w-100 m-auto">
   
- <%=form_tag @login_path do %>
+ <%=form_for @user do |f| %>
     <h1 class="h3 mb-3 fw-normal">Please Sign Up</h1>
         <div class="form-floating"> 
             
-            <%= email_field_tag :email, nil, :class => 'form-control', :id =>"floatingInput", :placeholder =>"name@example.com"%>
-            <%= label_tag :email, nil, :for => "floatingInput" %>
+            <%= f.email_field :email, :class => 'form-control', :id =>"floatingInput", :placeholder =>"name@example.com"%>
+            <%= f.label :email, :for => "floatingInput" %>
         </div>
         
         <div class="form-floating">
             
-            <%= password_field_tag :password, nil, :class => 'form-control', :id => "floatingPassword", :placeholder => "Password"%>
-            <%= label_tag :password, nil, :for => "floatingPassword" %>
+            <%= f.password_field :password, :class => 'form-control', :id => "floatingPassword", :placeholder => "Password"%>
+            <%= f.label :password, :for => "floatingPassword" %>
         </div>
 
         <div class="confirm">
         <div class="form-floating", id="confirm">
             
-            <%= password_field_tag :password_confirmation, nil, :class => 'form-control', :id => "floatingPassword", :placeholder => "Confirm Password"%>
-            <%= label_tag :password_confirmation, nil, :for => "floatingPassword" %>
+            <%= f.password_field :password_confirmation, :class => 'form-control', :id => "floatingPassword", :placeholder => "Confirm Password"%>
+            <%= f.label :password_confirmation, :for => "floatingPassword" %>
         </div>
         </div>
 
@@ -33,7 +33,7 @@
         </div>
         
         <div>
-            <%= submit_tag "Sign Up", :class => "w-100 btn btn-lg btn-primary" %>
+            <%= f.submit "Sign Up", :class => "w-100 btn btn-lg btn-primary" %>
         </div>
         <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
     <% end %>
